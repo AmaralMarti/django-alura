@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <title>ConnectedIn</title>
     </head>
-    <body>
+    <body>        
         <h1>Detalhe Perfil</h1>
         
+        {% if perfil %}
         Nome:{{perfil.nome}}
         <br>
         E-mail:{{perfil.email}}
@@ -14,6 +15,9 @@
         Telefone:{{perfil.telefone}}
         <br>
         Empresa:{{perfil.nome_empresa}}
-        <br>        
+        <br>
+        {% else %}
+		<h3>Perfil ID {{perfil_id}} não localizado</h3>
+        {% endif %}
     </body>
 </html>

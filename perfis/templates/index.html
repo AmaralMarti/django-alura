@@ -6,5 +6,15 @@
     </head>
     <body>
         <h1>Bem-vindo ao Connectedin</h1>
+        
+		{% if perfis %}
+		<ul>
+			{% for perfil in perfis %}
+			<li>{{perfil.id}} - {{perfil.nome}} - {{perfil.email}}</li>
+			{% endfor %}
+		</ul>
+		{% else %}
+		<h3>Sem perfis para exibir</h3>
+		{% endif %}
     </body>
 </html>
